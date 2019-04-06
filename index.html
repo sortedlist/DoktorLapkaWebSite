@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Вет-аптека "Доктор Лапка" - Главная</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/normalize.css">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/slider.css">
 </head>
 <body id="page-start">
     <header class="header">
@@ -21,67 +23,118 @@
             </div>
             <a href="#" class="address">
                 <p class="address__data">
-                        <i class="fas fa-map-marker-alt address__icon"></i>
-                        Киев, Тихвинский переулок 8</p>
+                    <i class="fas fa-map-marker-alt address__icon"></i>
+                    Киев, Тихвинский переулок 8</p>
             </a>
             <a href="tel:+380111111111" class="phone-number-block">
-                    <p class="phone-number">
-                        <i class="fas fa-phone phone-icon"></i>
-                        +38 011 111 11 11</p>
+                <p class="phone-number">
+                    <i class="fas fa-phone phone-icon"></i>
+                    +38 011 111 11 11</p>
             </a>
         </div>
-        <a href="#" class="logo-link">
-            <div class="logo">
-                <img src="./images/logo.png" alt="" class="logo__image">
-                <div class="caption">
-                    <p class="caption__vet-apteka">Ветеринарная аптека</p>
-                    <p class="caption__vet-apteka-name">"Доктор Лапка"</p>
-                </div>
+        <div class="logo-panel">
+            <a href="#" class="logo-panel__link">
+                <img src="./images/logo.png" alt="" class="logo-panel__image">
+            </a>
+            <div class="caption">
+                <p class="caption__vet-apteka">Ветеринарная аптека</p>
+                <p class="caption__vet-apteka-name">"Доктор Лапка"</p>
             </div>
-        </a>
+        </div>
         <nav class="navigation-menu">
-            
             <ul class="navigation-links">
-                <li class="navigation-links__item">
+                <!-- <li class="navigation-links__item">
                     <a href="" class="navigation-links__link">Главная</a>
-                </li>
-                <li class="navigation-links__item">
-                    <a href="" class="navigation-links__link">Услуги и цены</a>
-                </li>
-                <li class="navigation-links__item">
-                    <a href="" class="navigation-links__link">Акции</a>
-                </li>
-                <li class="navigation-links__item">
-                    <a href="" class="navigation-links__link">О нас</a>
-                </li>
-                <li class="navigation-links__item">
-                    <a href="" class="navigation-links__link">Контакты</a>
-                </li>
-                <li class="navigation-links__item">
-                    <a href="" class="navigation-links__link">Отзывы</a>
-                </li>
+                </li> -->
+
+                <a href="" class="navigation-links__link">
+                    <li class="navigation-links__item">
+                        <p>Главная</p>
+                    </li>
+                </a>
+                 <a href="" class="navigation-links__link">
+                    <li class="navigation-links__item">
+                        <p>Услуги и цены</p>
+                    </li>
+                </a>
+                 <a href="" class="navigation-links__link">
+                    <li class="navigation-links__item">
+                        <p>Акции</p>
+                    </li>
+                </a>
+                 <a href="" class="navigation-links__link">
+                    <li class="navigation-links__item">
+                        <p>Контакты</p>
+                    </li>
+                </a>
+                 <a href="" class="navigation-links__link">
+                    <li class="navigation-links__item">
+                        <p>Отзывы</p>
+                    </li>
+                </a>
             </ul>
         </nav>
         <div class="medical-services">
-            <img src="" alt="" class="doctor-image">
+            <!-- <img src="" alt="" class="doctor-image"> -->
+            <i class="fas fa-stethoscope doctor-image"></i>
             <ul class="services">
                 <li class="service">
-                    <i class="fas fa-check check-mark-icon"></i>
-                    <p class="service__name">Бесплатные консультации опытного ветеринарного врача</p>
+                    <p class="service__name">
+                        <i class="fas fa-check check-mark-icon"></i>
+                        Бесплатные консультации опытного ветеринарного врача</p>
                 </li>
                 <li class="service">
-                    <i class="fas fa-check check-mark-icon"></i>
-                    <p class="service__name">Вызов врача на дом</p>
+                    <p class="service__name">
+                        <i class="fas fa-check check-mark-icon"></i>
+                        Вызов врача на дом</p>
                 </li>
             </ul>
             <a href="#" class="medical-services__apply-button">Записатся</a>
         </div>
     </header>
-    <div class="slider">
-        <div class="slide slide1"></div>
-        <div class="slide slide2"></div>
-        <div class="slide slide3"></div>
-        <div class="slide slide4"></div>
+    <div id="slider" class="slider">
+        <ol class="slider__indicators">
+            <li class="slider__indicator slider__indicator_active" data-slide-to="0"></li>
+            <li class="slider__indicator" data-slide-to="1"></li>
+            <li class="slider__indicator" data-slide-to="2"></li>
+            <li class="slider__indicator" data-slide-to="3"></li>
+        </ol>
+        <div class="slider__items">
+            <div class="slider__item slider__item_active">
+                <img src="./images/header_cats.jpg" alt="" class="slide-image">
+                <div class="dark-layer"></div>
+                <div class="slide-info">
+                    <h3 class="slide-tittle">Some information!</h3>
+                    <p class="slide-text">Blanditiis earum assumenda sequi inventore accusamus fugiat quidem sint placeat veritaetur distinctio suscipit porro ipsum animi, voluptatum id tempore quaerat accusamus dolorum! Voluptate repudiandae consectetur neque incidunt temporibus!</p>
+                </div>
+            </div>
+            <div class="slider__item">
+                <img src="./images/header_cats.jpg" alt="" class="slide-image"> 
+                <div class="dark-layer"></div>
+                <div class="slide-info">
+                    <h3 class="slide-tittle">Some information!</h3>
+                    <p class="slide-text">Blanditiis earum assumenda sequi inventore accusamus fugiat quidem sint placeat veritaetur distinctio suscipit porro ipsum animi, voluptatum id tempore quaerat accusamus dolorum! Voluptate repudiandae consectetur neque incidunt temporibus!</p>
+                </div>
+            </div>
+            <div class="slider__item">
+                <img src="./images/header_cats.jpg" alt=""  class="slide-image">
+                <div class="dark-layer"></div>
+                <div class="slide-info">
+                    <h3 class="slide-tittle">Some information!</h3>
+                    <p class="slide-text">Blanditiis earum assumenda sequi inventore accusamus fugiat quidem sint placeat veritaetur distinctio suscipit porro ipsum animi, voluptatum id tempore quaerat accusamus dolorum! Voluptate repudiandae consectetur neque incidunt temporibus!</p>
+                </div>
+            </div>
+            <div class="slider__item">
+                <img src="./images/header_cats.jpg" alt=""  class="slide-image">
+                <div class="dark-layer"></div>
+                <div class="slide-info">
+                    <h3 class="slide-tittle">Some information!</h3>
+                    <p class="slide-text">Blanditiis earum assumenda sequi inventore accusamus fugiat quidem sint placeat veritaetur distinctio suscipit porro ipsum animi, voluptatum id tempore quaerat accusamus dolorum! Voluptate repudiandae consectetur neque incidunt temporibus!</p>
+                </div>
+            </div>
+        </div>
+        <a class="slider__control slider__control_prev" href="#" role="button"></a>
+        <a class="slider__control slider__control_next" href="#" role="button"></a>
     </div>
     <div class="prices">
         <h1 class="section-tittle">Товары и цены</h1>
@@ -118,12 +171,12 @@
     </div>
     <div class="promotions">
         <h1 class="section-tittle">Акции</h1>
-        <div class="promotion">
+        <div class="promotion promotion-left">
             <h2 class="promotion__tittle">Комплекс Здоровый старт</h2>
             <p class="promotion__description">Стоимость 460 – 830 грн, в зависимости от производителя вакцины или чипа, включает осмотр доктора + оформление ветеринарного паспорта + вакцинацию + микрочип (-10% от  стоимости комплекса). Микрочип – современный способ обезопасить своего питомца, практикуемый ветеринарными врачами всего мира!</p>
             <a href="" class="promotion__button">Подробнее</a>
         </div>
-        <div class="promotion">
+        <div class="promotion  promotion-right">
             <h2 class="promotion__tittle">Комплекс Здоровый старт</h2>
             <p class="promotion__description">Стоимость 460 – 830 грн, в зависимости от производителя вакцины или чипа, включает осмотр доктора + оформление ветеринарного паспорта + вакцинацию + микрочип (-10% от  стоимости комплекса). Микрочип – современный способ обезопасить своего питомца, практикуемый ветеринарными врачами всего мира!</p>
             <a href="" class="promotion__button">Подробнее</a>
@@ -163,7 +216,7 @@
         <img src="" alt="" class="contacts__map">
     </div>
     <div class="reviews">
-        <h1 class="section-tittle">Контакты</h1>  
+        <h1 class="section-tittle">Отзывы</h1>  
         <div class="reviews-slider">
             <div class="review">
                 <p class="review__text">Мы были у офтальмолога Катерины Андреевны. Она единственная из трех разных ветеринаров в других клиниках смогла точно поставить диагноз, взять анализы и вылечить животное. Успешно провела операцию, после чего у нас все супер</p>
@@ -210,5 +263,6 @@
             </a>
         </div>
     </footer>
+    <script src="./js/slider.js"></script>
 </body>
 </html>
