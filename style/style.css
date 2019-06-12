@@ -1,13 +1,24 @@
+@font-face {
+    font-family: "Nautilus";
+    src: url("../fonts/nautilus/Nautilus.otf") format("otf");
+}
+   
 html, body {
     padding: 0;
     margin: 0;
+    min-width: 520px;
+    
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    
     /* width: 80vw; */
     /* margin: 0 15vw; */
-    --main-blue-color: rgb(71, 74, 255);
+    /* --main-blue-color: rgb(71, 74, 255); */
+    --main-blue-color: #009FE3;
+    --main-red-color: #E30613;
 }
 
 .header {
@@ -23,27 +34,48 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    flex-wrap: wrap;
 }
 
-.social-links {
-    
+.social-links { 
+    position: absolute;
 }
 
 .social-links__link {
+    font-size: 24px;
     margin: auto 5px;
     color: rgb(107, 107, 107);
     text-decoration: none;
 }
 
+.facebook-link {
+    color: rgba(0, 0, 199, 0.589);
+    /* color: rgb(0, 143, 204); */
+}
+
 .address {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    margin: auto;
     color: rgb(107, 107, 107);
     text-decoration: none;
+
+    /* background: aqua; */
+    height: 100%;
+
+}
+
+.address__data {
+    /* background: #E30613; */
+    margin: auto;
 }
 
 .phone-number-block {
+    /* position: absolute;
+    right: 0;
+    top: 0;
+    height: 42px; */
+
     display: flex;
     background: var(--main-blue-color);
     text-decoration: none;
@@ -70,21 +102,22 @@ body {
     /* padding: 0;
     margin: 0; */
     
-    /* background: greenyellow; */
+    /* background: rgb(44, 71, 3); */
 }
-
+ 
 .logo-panel__link {
     text-decoration: none;
     height: 100%;
     display: flex;
+    /* margin-right: 0; */
 
-    /* background: rgb(187, 108, 108) */
+    /* background: rgb(187, 108, 108); */
 }
 
 .logo-panel__image {
     height: 80%;
 
-    /* background: rgb(189, 92, 92); */
+    /* background: rgb(88, 30, 30); */
 
     margin-top: auto;
     margin-bottom: auto;
@@ -94,11 +127,11 @@ body {
     height: 100%;
     margin-left: 10vw;
     color: red;
-
     /* background: coral; */
 
     display: flex;
     flex-direction: column;
+    /* background: aqua; */
 }
 
 .caption__vet-apteka {
@@ -106,16 +139,21 @@ body {
     font-weight: bold;
     font-size: 25px;
     margin-top: auto;
-    margin-bottom: 5px;
+    margin-bottom: 0;
+    /* margin: 0; */
+    /* background: blueviolet; */
 }
 
 .caption__vet-apteka-name {
+    font-family: Nautilus;
     font-weight: bold;
     font-style: italic;
-    margin-top: 5px;
+    margin-top: 0;
+    /* margin: 0; */
     margin-bottom: auto;
     text-align: center;
-    font-size: 22px;
+    font-size: 32px;
+    /* background: chartreuse; */
 }
 
 .navigation-menu {
@@ -207,6 +245,12 @@ body {
     font-weight: bold;
 }
 
+.slider {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    /* background: blueviolet;  */
+}
+
 .slider__item {
     position: relative;
     display: flex;
@@ -214,12 +258,12 @@ body {
 
 .slide-image {
     width: 100%;
-    height: 50vh;
+    height: 60vmin;
     object-fit: cover;  
 }
 
 .dark-layer {
-    height: 50vh;
+    height: 60vmin;
     width: 100%;
     /* object-fit: cover;   */
     position: absolute;
@@ -253,6 +297,14 @@ body {
     text-align: center;
     text-transform: uppercase;
     font-size: 26px;
+    margin-top: 20px;
+}
+
+.main-content {
+    margin: 0;
+    padding: 0;
+    background: rgb(248, 248, 248);   
+    /* background: rgb(99, 62, 62); */
 }
 
 .promotions {
@@ -262,7 +314,8 @@ body {
 .promotion {
     /* margin: 30px 10vw; */
     margin-top: 25px;
-    background: rgb(243, 243, 243);
+    background: white;
+    /* background: rgb(248, 248, 248); */
     padding: 25px;
     display: flex;
     flex-direction: column;
@@ -282,7 +335,7 @@ body {
 }
 
 .promotion__description {
-    color: rgb(112, 112, 112);
+    color: rgb(85, 85, 85);
 }
 
 .promotion__button {
@@ -299,16 +352,329 @@ body {
 
 }
 
+.prom__photo {
+    margin: 15px;
+    max-width: 90%;
+    /* min-height: 400px;  */
+    overflow: auto;
+}
+
 .about-us {
     padding: 30px 10vw;
+    text-align: center;
+}
+
+.consult {
+    display: flex;
+    justify-content:  center;
+}
+
+.consult_info {
+    margin: 10px;
+}
+
+.number {
+    /* text-decoration: underline; */
+    font-size: 24px;
+
+    margin: 10px;
 }
 
 .contacts {
+    background: rgb(248, 248, 248);
+    padding: 20px;
+}
+
+.contacts-content {
     padding: 30px 10vw;
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.contacts-text-block {
+    width: 40%;
+    margin: auto 5%;
+}
+
+.contacts__map {
+    margin-left: 50px;
+    width: 50%;
+}
+
+.footer {
+    background: grey;
+    font-size: 12px;
+    padding: 20px;
+    display: flex;
+}
+
+.footer-contacts {
+    display: flex;
+    margin: auto;
+}
+
+.contacts__paragraph {
+    margin: 10px;
+    color: white;
 }
 
 .reviews {
     padding: 30px 10vw;
 }
 
+.reviews-slider {
+    display: flex;
+    align-items: center;
+}
 
+.reviews__arrow {
+    color: black;
+}
+
+.reviews-list {
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.review {
+    margin: 15px;
+    max-width: 25%;
+
+    background: white;
+    border: solid 1px rgb(224, 224, 224);
+    border-radius: 5px;
+    padding: 20px;
+    
+}
+
+.reviews-info {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews-link {
+    text-decoration: none;
+}
+
+.reviews-link:hover {
+    text-decoration: underline currentColor;
+}
+
+.author {
+    display: flex;
+}
+
+.author__photo {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.author__info {
+    /* background: #009FE3; */
+    display: flex;
+    flex-direction: column;
+}
+
+.author__name {
+    margin-top: auto;
+    margin-bottom: 0;
+    font-size: 18px;
+    /* background: #E30613; */
+}
+
+.author__about {
+    margin-top: 0;
+    margin-bottom: auto;
+    font-size: 15px;
+    /* background: brown; */
+}
+
+.rating {
+    color: rgb(255, 230, 0);
+}
+
+.review-text__text {
+    font-size: 16px;
+    /* background: #009FE3; */
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.review-text__gmaps-link {
+    margin: 0;
+    font-size: 13px;
+    color: #000;
+    /* background: blueviolet; */
+}
+
+.review-text__gmaps-link:hover {
+    color: blue;
+}
+
+.prices {
+    margin-top: 0;
+    /* background: #E30613; */
+    padding-left: 0;
+    /* background: white; */
+    /* background: rgb(248, 248, 248); */
+}
+
+.product-categories {
+    /* background: #009FE3; */
+    /* margin-left: 0; */
+    padding: 0 20px;
+
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    list-style: none;
+
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: repeat(2, auto-fit);
+}
+
+.product-category {
+    /* min-width: 320px; */
+    margin: 10px;
+    /* flex-grow: 1; */
+
+    background: white;
+    border: solid 1px rgb(224, 224, 224);
+    border-radius: 5px;
+    /* box-shadow: 5px 5px 5px rgb(190, 190, 190); */
+    /* background: #009FE3; */
+    /* border-radius: 5px; */
+    /* padding: 0; */
+}
+
+.product-category:hover {
+    box-shadow: 0px 0px 10px rgb(190, 190, 190);
+}
+
+.product-category__link {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    /* background: blueviolet; */
+    /* padding: 0; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.product-category__name {
+    margin: auto 10px;
+    /* background: aqua; */
+}
+
+.product-category__photo {
+    width: 100%;
+    height: 220px;
+    
+    /* margin: 0; */
+    object-fit: cover;
+    /* overflow: hidden; */
+    
+    /* border-radius: 10px; */
+}
+
+.burger-menu {
+    /* visibility: hidden; */
+    display: none;
+
+    margin-right: 10%;
+    /* background: #E30613; */
+    /* display: flex; */
+}
+
+.open {
+    /* margin: auto; */
+    margin: auto 10px;
+    /* background: blueviolet; */
+}
+
+@media only screen and (max-width: 550px) {
+    .caption__vet-apteka {
+        font-size: 18px;
+    }
+
+    .caption__vet-apteka-name {
+        font-size: 25px;
+    }
+
+    .phone-number-block {
+        /* margin-top: 100px; */
+    }
+
+
+}
+
+@media only screen and (max-width: 740px) {
+    .consult {
+        display: block;
+    }
+
+    .burger-menu {
+        /* visibility: visible; */
+        display: block;
+    }
+
+    .navigation-menu {
+        display: none;
+    }
+
+    .logo-panel {
+        justify-content: unset;
+        /* align-items: center; */
+    }
+
+    .logo-panel__link  {
+        margin-right: 3%;
+    }
+
+    .caption {
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .contacts-content {
+        flex-direction: column;
+    }
+
+    .contacts-text-block {
+        margin: auto;
+        width: auto;
+    }
+
+    .contacts__map {
+        margin: 20px auto;
+        width: auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .phone-number-block {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 42px;
+    }
+}
+
+
+/* @media only screen and (min-width: 1024px) {
+    body {
+        zoom: 1.16;
+    }
+} */
